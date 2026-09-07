@@ -1,0 +1,137 @@
+---
+import logo from '../assets/images/demo-logo.png'
+---
+<nav>
+  <div class="container navbar">
+    <div class="nav-brand">
+      Riverside Roofing Inc
+    </div>
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <ul class="nav-menu">
+      <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<style>
+
+  nav {
+    background: var(--primary-blue);
+  }
+
+  img {
+    width: 100px;
+    height: auto;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+  }
+
+  .nav-link {
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: white;
+  }
+
+  .nav-link {
+  
+  }
+
+  .nav-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+  }
+
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+
+  .nav-item {
+    padding: 0 20px 0 20px;
+  }
+
+  .hamburger {
+    display: none;
+    border: 5px solid rgba(0,0,0,0);
+    padding: 8px;
+    transition: all 0.1s ease;
+    border-radius: 8px;
+    height: 30px;
+  }
+
+  .bar {
+    padding: 2px 20px;
+    background-color: gray;
+    border-radius: 10px;
+  }
+
+  .hamburger:active {
+    transform: translateY(1px);
+  }
+
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    .hamburger.active {
+      border: 5px solid rgb( from gray r g b / 0.3);
+    }
+
+    .nav-link {
+    }
+
+    .nav-menu {
+      position: fixed;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      top: 80px;
+      left: -110%;
+      background: rgb(from var(--primary-blue) r g b /0.7);
+      backdrop-filter: blur(10px);
+      transition: left 0.5s ease;
+      padding-top: 100px;
+      z-index: 1000;
+    }
+
+    .nav-menu > li {
+      padding: 1em;
+    }
+
+    .nav-menu.active {
+      left: 0;
+    }
+  }
+</style>
+
+<script>
+  const hamburger = document.querySelector(".hamburger")
+  const navMenu = document.querySelector('.nav-menu')
+
+  hamburger.addEventListener('click', toggleNavMenu)
+
+  function toggleNavMenu() {
+    console.log('clicked')
+    navMenu.classList.toggle("active")
+    hamburger.classList.toggle("active")
+  }
+</script>

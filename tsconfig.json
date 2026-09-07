@@ -6,7 +6,7 @@
     "strict": false,
     "noImplicitAny": false,
     "strictFunctionTypes": false
-  }
+  },
   "include": [".astro/types.d.ts", "**/*"],
   "exclude": ["dist"]
 }

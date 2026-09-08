@@ -56,10 +56,20 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <div class="article-body">
       <slot />
     </div>
+    <div class="cta-container">
+      <a class="cta-btn" href="tel:7052740375">Call for a Professional Assessment</a>
+    </div>
   </article>
 </BaseLayout>
 
 <style>
+
+  .cta-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
   /* Encapsulated scoping for the article layout only */
   .commercial-roofing-article {
     max-width: 760px;
@@ -169,6 +179,14 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   @media (max-width: 768px) {
     .article-body :global(table) {
       font-size: 0.5rem;
+    }
+
+    .article-header h1 {
+      font-size: 1.75rem;
+    }
+
+    .article-body :global(h2) {
+      font-size: 1.5rem;
     }
   }
 </style>

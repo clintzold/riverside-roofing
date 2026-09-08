@@ -1,0 +1,103 @@
+---
+import mapsIcon from '../assets/images/maps-gps.svg'
+---
+<div class="container">
+  <div class="title-container">
+    <span class="reveal reveal-grow"></span><h2 class="section-title reveal reveal-right">Contact Us</h2>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-details reveal reveal-up">
+      <div class="address">
+        <h3>Address</h3>
+        <p>
+          Riverside Roofing Inc<br>
+          1340 Matthew Brady Blvd<br>
+          Windsor, ON<br>
+          N8S 4R6<br>
+        </p>
+      </div>
+      <div class="hours reveal">
+        <h3>Hours of operation</h3>
+      </div>
+      <div class="contact-info">
+        <h3>Reach us</h3>
+        <p>
+          Office: 519-945-4263<br>
+          Fax: 519-974-2926<br>
+          Email: <a href="mailto:info@riversideroofinginc.com">info@riversideroofinginc.com</a>
+        </p>
+      </div>
+      <a class="cta-btn" href="tel:5199454263">Give Us A Call!</a>
+    </div>
+    <div class="google-map reveal reveal-up">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2949.9452811725414!2d-82.94210565899265!3d42.32236583760134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2adac81ff64b%3A0xedc0bce2e5da8e71!2sRiverside%20Roofing%20Inc%20Windsor%20-%20Flat%20%26%20Commercial%20Roofing!5e0!3m2!1sen!2sca!4v1788843205297!5m2!1sen!2sca"
+        width="600" 
+        height="450" 
+        style="border:0;"
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="strict-origin-when-cross-origin">
+      </iframe>
+      <a href="https://maps.app.goo.gl/mD88fRKyFz73DZM77"><img src={mapsIcon.src} alt=""></a>
+    </div>
+  </div>
+</div>
+
+<style>
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.address, .contact-info, .hours {
+  margin-bottom: 2rem;
+}
+
+
+.contact-details {
+  place-self: center;
+}
+
+
+.contact-details h3 {
+  font-size: 1.5rem;
+}
+
+.contact-details p {
+  font-size: 1.25rem;
+}
+
+
+.google-map {
+  position: relative;
+}
+
+.google-map a {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  cursor: pointer;
+  z-index: 900;
+}
+
+.google-map img {
+  width: 60px;
+  height: auto;
+}
+
+iframe {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+@media (max-width: 480px) {
+  .contact-grid {
+    gap: 2rem;
+    grid-template-columns: 1fr;
+  }
+
+  .google-map {
+  }
+}
+</style>

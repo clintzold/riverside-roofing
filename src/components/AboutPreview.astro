@@ -1,0 +1,58 @@
+---
+import oldLocationImage from '../assets/images/old-location.webp'
+---
+
+<div class="container">
+  <div class="title-container">
+    <span class="reveal reveal-grow"></span><h2 class="section-title reveal reveal-right">Our Story</h2>
+  </div>
+  <div class="about-grid">
+    <img class="reveal reveal-up" src={oldLocationImage.src} alt="">
+    <div class="about-text reveal reveal-up">
+      <h3>A history of excellence.</h3>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima iusto ullam optio sed ab, cumque magni. Fuga molestiae ex error autem voluptate. Laboriosam illo in voluptates, esse voluptas maxime ipsam, molestiae sunt facere facilis nostrum adipisci harum est neque odio tempore earum ratione necessitatibus repellendus cupiditate. Nemo necessitatibus ad atque!</p>
+      <a class="cta-btn" href="#">Read Our Story</a>
+    </div>
+  </div>
+</div>
+
+<style>
+.section-title {
+  color: white;
+}
+
+.about-grid {
+  display: grid;
+  gap: 50px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.about-grid img {
+  place-self: center;
+  width: 70%;
+  height: auto;
+}
+
+.about-text {
+  padding: 15px;
+  place-self: center;
+  color: white;
+  border-left: 2px solid var(--primary-blue);
+  border-bottom: 2px solid var(--primary-blue);
+}
+
+.about-text h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  font-size: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>

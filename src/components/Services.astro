@@ -1,0 +1,59 @@
+---
+import tpoImage from '../assets/images/service-tpo.webp'
+import epdmImage from '../assets/images/service-tpdm.webp'
+import bitumenImage from '../assets/images/service-bitumen.webp'
+---
+<div class="container">
+  <div class="title-container">
+    <span class="reveal reveal-grow"></span><h2 class="section-title reveal reveal-right">Our Services</h2>
+  </div>
+  <div class="services-grid">
+    <div class="card reveal reveal-up">
+      <img src={tpoImage.src} alt="" class="card-img">
+      <div class="card-body">
+        <h3>TPO Roofing</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium dolorum possimus atque, inventore itaque maiores nisi id quae voluptatem amet aut eligendi vitae similique dicta?</p>
+        <a class="cta-btn" href="#">More About TPO</a>
+      </div>
+    </div>
+    <div class="card reveal reveal-up">
+      <img src={epdmImage.src} alt="" class="card-img">
+      <div class="card-body">
+        <h3>EPDM Roofing</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium dolorum possimus atque, inventore itaque maiores nisi id quae voluptatem amet aut eligendi vitae similique dicta?</p>
+        <a class="cta-btn" href="#">More About EPDM</a>
+      </div>
+    </div>
+    <div class="card reveal reveal-up">
+      <img src={bitumenImage.src} alt="" class="card-img">
+      <div class="card-body">
+        <h3>2-Ply Bitumen Roofing</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium dolorum possimus atque, inventore itaque maiores nisi id quae voluptatem amet aut eligendi vitae similique dicta?</p>
+        <a class="cta-btn" href="#">More About Bitumen</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.services-grid {
+  gap: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+.card h3 {
+  margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>

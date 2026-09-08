@@ -1,0 +1,87 @@
+---
+import tpoOneImage from '../assets/images/tear-off.jpg'
+import tpoTwoImage from '../assets/images/tpo-welding.jpg'
+import tpoThreeImage from '../assets/images/tpo-roof.jpg'
+import gravelOne from '../assets/images/gravel-finished.jpg'
+import flashingOne from '../assets/images/perimeter-flashing.jpg'
+import flatRoofProgress from '../assets/images/flat-roof-progress.jpg'
+---
+
+<div class="container">
+  <div class="title-container">
+    <span class="reveal reveal-grow"></span><h2 class="section-title reveal reveal-right">Work</h2>
+  </div>
+  <div class="location">
+    <div class="location-box">
+      Devonshire Mall - Windsor, ON
+    </div>
+  </div>
+  <div class="gallery-grid">
+    <img src={tpoOneImage.src} alt="">
+    <img src={tpoTwoImage.src} alt="">
+    <img src={tpoThreeImage.src} alt="">
+  </div>
+  <div class="location">
+    <div class="location-box">
+      Crawford Paper - Windsor, ON
+    </div>
+  </div>
+  <div class="gallery-grid">
+    <img src={gravelOne.src} alt="">
+    <img src={flashingOne.src} alt="">
+    <img src={flatRoofProgress.src} alt="">
+  </div>
+  <div class="location">
+    <div class="location-box">
+      Devonshire Mall - Windsor, ON
+    </div>
+  </div>
+  <div class="gallery-grid">
+    <img src={tpoOneImage.src} alt="">
+    <img src={tpoTwoImage.src} alt="">
+    <img src={tpoThreeImage.src} alt="">
+  </div>
+</div>
+
+<style>
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 50px;
+}
+
+.gallery-grid img {
+  place-self: center;
+  width: 100%;
+  height: auto;
+}
+
+.location {
+  padding: 0 0 20px 0;
+  display: flex;
+  justify-content: start;
+}
+
+.location-box {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--light-blue);
+  padding: 10px 10px 10px 20px;
+  border-right: 2px solid gray;
+  border-bottom: 2px solid gray;
+}
+
+.job-description {
+  display: flex;
+  justify-content: end;
+  padding: 30px 0;
+}
+.description-box {
+  width: 75%;
+  padding: 10px 10px 10px 20px;
+  border-left: 2px solid gray;
+  border-bottom: 2px solid gray;
+}
+</style>

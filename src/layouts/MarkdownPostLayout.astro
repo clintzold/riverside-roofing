@@ -165,4 +165,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     border-top: 2px dashed #dddddd;
     margin: 3rem 0;
   }
+
+  @media (max-width: 768px) {
+    .article-body :global(table) {
+      font-size: 0.7rem;
+    }
+  }
 </style>

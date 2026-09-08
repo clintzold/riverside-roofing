@@ -1,0 +1,168 @@
+---
+// src/layouts/MarkdownPostLayout.astro
+import BaseLayout from './BaseLayout.astro'; // Adjust this path to your actual BaseLayout location
+
+const { frontmatter } = Astro.props;
+
+const formattedDate = new Date(frontmatter.pubDate).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<BaseLayout>
+  <!-- JSON-LD Article Schema injected directly into the page header for SEO -->
+  <script type="application/ld+json" is:inline slot="head" define:vars={{ frontmatter, formattedDate, canonicalURL }}>
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": frontmatter.title,
+      "description": frontmatter.description,
+      "datePublished": frontmatter.pubDate,
+      "author": {
+        "@type": "Organization",
+        "name": frontmatter.author
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": canonicalURL
+      }
+    }
+  </script>
+
+  <!-- Article Container -->
+  <article class="commercial-roofing-article">
+    <header class="article-header">
+      <span class="article-category">Commercial Roofing Guide</span>
+      <h1>{frontmatter.title}</h1>
+      
+      <div class="article-meta">
+        <p>Published on <time datetime={frontmatter.pubDate}>{formattedDate}</time> by <span>{frontmatter.author}</span></p>
+      </div>
+
+      {frontmatter.tags && (
+        <div class="article-tags">
+          {frontmatter.tags.map((tag) => (
+            <span class="article-tag">#{tag}</span>
+          ))}
+        </div>
+      )}
+    </header>
+
+    <!-- Markdown Content Injection Slot -->
+    <div class="article-body">
+      <slot />
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  /* Encapsulated scoping for the article layout only */
+  .commercial-roofing-article {
+    max-width: 760px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    color: #222222;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+
+  /* Header Section */
+  .article-header {
+    margin-bottom: 2.5rem;
+    border-bottom: 2px solid #f4f4f4;
+    padding-bottom: 1.5rem;
+  }
+  .article-category {
+    color: #0056b3;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+  }
+  .article-header h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin: 0.5rem 0 1rem 0;
+    color: #111111;
+  }
+  .article-meta {
+    color: #555555;
+    font-size: 0.95rem;
+  }
+  .article-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  .article-tag {
+    background: #f4f4f4;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    color: #555555;
+  }
+
+  /* Target elements generated strictly by Markdown */
+  .article-body :global(p) {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    color: #333333;
+  }
+  .article-body :global(h2) {
+    font-size: 1.75rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: #111111;
+  }
+  .article-body :global(h3) {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    color: #111111;
+  }
+  .article-body :global(strong) {
+    color: #000000;
+  }
+  .article-body :global(ul) {
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .article-body :global(li) {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+
+  /* SEO Markdown Comparison Table styling */
+  .article-body :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2.5rem 0;
+    font-size: 1rem;
+  }
+  .article-body :global(th), 
+  .article-body :global(td) {
+    border: 1px solid #dddddd;
+    padding: 0.75rem;
+    text-align: left;
+  }
+  .article-body :global(th) {
+    background-color: #f8f9fa;
+    font-weight: 700;
+  }
+  .article-body :global(tr:nth-child(even)) {
+    background-color: #fbfbfb;
+  }
+  
+  /* Horizontal Divider styling */
+  .article-body :global(hr) {
+    border: 0;
+    border-top: 2px dashed #dddddd;
+    margin: 3rem 0;
+  }
+</style>

@@ -4,6 +4,9 @@
   --dark-color: black;
   --light-blue: rgba(111, 143, 175, 1);
   --primary-gray: #F0F0F0;
+
+  --section-padding: 100px 0;
+  --hero-padding: 200px 0;
 }
 
 html {
@@ -18,7 +21,7 @@ html {
 
 /* Sections */
 section {
-  padding: 100px 0;
+  padding: var(--section-padding);
 }
 
 .section-title {
@@ -120,5 +123,16 @@ section {
 
 .reveal-grow.visible {
   padding: 25px 2px;
+}
+
+@media (max-width: 768px) {
+ :root {
+    --section-padding: 60px 0;
+    --hero-padding: 150px 0;
+  }
+
+  .title-container {
+    margin-bottom: 60px;
+  }
 }
 

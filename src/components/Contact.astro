@@ -49,6 +49,7 @@ import mapsIcon from '../assets/images/maps-gps.svg'
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  place-items: center;
 }
 
 .address, .contact-info, .hours {
@@ -61,7 +62,6 @@ a {
 
 
 .contact-details {
-  place-self: center;
 }
 
 
@@ -73,9 +73,9 @@ a {
   font-weight: 500;
 }
 
-
 .google-map {
   position: relative;
+  padding: 1rem;
 }
 
 .google-map a {
@@ -92,17 +92,20 @@ a {
 }
 
 iframe {
-  width: 100%;
-  aspect-ratio: 1 / 1;
+  width: 400px;
+  height: 400px;
+}
+@media (max-width: 768px) {
+  iframe {
+    width: 320px;
+    height: 320px;
+  }
 }
 
 @media (max-width: 480px) {
   .contact-grid {
     gap: 2rem;
     grid-template-columns: 1fr;
-  }
-
-  .google-map {
   }
 }
 </style>

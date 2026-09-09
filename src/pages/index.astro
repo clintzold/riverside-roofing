@@ -6,6 +6,8 @@ import WorkGallery from '../components/WorkGallery.astro'
 import AboutPreview from '../components/AboutPreview.astro'
 import Contact from '../components/Contact.astro'
 import logo from '../assets/images/demo-logo_preview.png'
+import bgImage from '../assets/images/tpo-roof.jpg'
+const bgUrl = `url(${bgImage.src})`
 const pageTitle = "Commercial and Industrial Roofing | Riverside Roofing"
 ---
 <BaseLayout pageTitle={pageTitle}>
@@ -39,7 +41,7 @@ const pageTitle = "Commercial and Industrial Roofing | Riverside Roofing"
   </section>
 </BaseLayout>
 
-<style>
+<style define:vars={{bgUrl}}>
 /*Hero Elements*/
 .hero {
   position: relative;
@@ -80,7 +82,7 @@ const pageTitle = "Commercial and Industrial Roofing | Riverside Roofing"
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url('/tpo-roof.jpg');
+  background-image: var(--bgUrl);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

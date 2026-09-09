@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
+import ChooseUs from '../components/ChooseUs.astro'
 import Services from '../components/Services.astro'
 import WorkGallery from '../components/WorkGallery.astro'
 import AboutPreview from '../components/AboutPreview.astro'
@@ -13,13 +14,16 @@ const pageTitle = "Commercial and Industrial Roofing | Riverside Roofing"
       <div class="hero-grid">
         <img src={logo.src} alt="">
         <div class="hero-title">
-          <h1>A roofing legacy that stands the test of time.</h1>
+          <h1>Roofs that stand the test of time.</h1>
           <p>Windsor, Ontario's trusted source for high-quality flat top, industrial, commercial and specialty residential roofing for over 70 years.</p>
           <a class="cta-btn" href="tel:+17052740375">Give us a Call</a>
         </div>
       </div>
     </div>
     <div class="hero-bg"></div>
+  </section>
+  <section class="choose-us-section">
+    <ChooseUs />
   </section>
   <section class="services" id="services">
     <Services />
@@ -39,12 +43,12 @@ const pageTitle = "Commercial and Industrial Roofing | Riverside Roofing"
 /*Hero Elements*/
 .hero {
   position: relative;
-  background: rgba(255, 255, 255, 0.3);
-  padding: 150px 0;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 200px 0;
 }
 
 .hero-grid {
-  text-shadow: 1px 1px 2px gray;
+  text-shadow: 1px 1px 1px gray;
   display: grid;
   grid-template-columns: 1fr;
 }
@@ -62,13 +66,14 @@ const pageTitle = "Commercial and Industrial Roofing | Riverside Roofing"
 }
 
 .hero-title h1 {
-  font-size: 2.25rem;
   margin-bottom: 10px;
+  color: var(--primary-blue);
+  font-family: 'Roboto';
 }
 
 .hero-title p {
-  font-size: 1.25rem;
   font-family: 'Roboto';
+  font-weight: 500;
 }
 
 
@@ -92,6 +97,10 @@ const pageTitle = "Commercial and Industrial Roofing | Riverside Roofing"
 }
 
 .contact-section {
+  background: var(--light-blue);
+}
+
+.choose-us-section {
   background: var(--light-blue);
 }
 

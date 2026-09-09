@@ -1,0 +1,107 @@
+---
+import staffImage from '../assets/images/staff-photo.jpg'
+---
+
+<div class="container">
+  <div class="title-container">
+    <strong class="reveal reveal-grow"></strong><h2 class="section-title reveal reveal-right">Why Riverside?</h2>
+  </div>
+  <div class="choose-us-grid">
+    <div class="card">
+      <div class="reveal reveal-up">
+        <h3><em>Proven Reliability</em></h3>
+        <ul>
+          <li><p><strong>70 years of service</strong> in Windsor-Essex and beyond.</p></li>
+          <li><p><strong>Thousands of roofs</strong> built, maintained and repaired.</p></li>
+        </ul>
+      </div>
+
+      <div class="reveal reveal-up">
+        <h3><em>Innovative</em></h3>
+        <ul>
+          <li><p><strong>We were there</strong> at the birth of modern roofing technologies.</p></li>
+          <li><p><strong>Developed and refined modern roofing</strong> techniques standardized across North America.</p></li>
+        </ul>
+      </div>
+
+      <div class="reveal reveal-up">
+        <h3><em>Locally Owned and Operated</em></h3>
+        <ul>
+          <li><p><strong>Multi-generational business</strong> with deep ties throughout Windsor and Essex County.</p></li>
+          <li><p><strong>Thousands of roofs</strong> built and maintained in our community.</p></li>
+        </ul>
+      </div>
+    </div>
+    <img src={staffImage.src} alt="">
+  </div>
+</div>
+
+<style>
+h2 {
+}
+.choose-us-grid {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+ul {
+  padding-left: 1rem;
+  margin-bottom: 1.5rem;
+  list-style: none;
+}
+.card {
+  width: 80%;
+  background: var(--light-blue);
+  box-shadow: none;
+}
+
+h3 {
+  color: var(--primary-blue);
+  margin-bottom: 0.3rem;
+}
+
+li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+}
+
+p {
+  font-weight: 500;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0;
+}
+
+@media (max-width: 768px) {
+  .card {
+    grid-row: 2;
+    width: 90%;
+  }
+
+  img {
+    width: 90%;
+  }
+
+  .choose-us-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+</style>

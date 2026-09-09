@@ -3,11 +3,11 @@
   --primary-red: #F00020;
   --dark-color: black;
   --light-blue: rgba(111, 143, 175, 1);
-  --nav-color: black;
+  --primary-gray: #F0F0F0;
 }
 
 html {
-  background: #F0F0F0;
+  background: var(--primary-gray);
 }
 
 * {

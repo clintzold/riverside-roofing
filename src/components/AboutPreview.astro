@@ -10,7 +10,7 @@ import oldLocationImage from '../assets/images/old-location.webp'
     <img class="reveal reveal-up" src={oldLocationImage.src} alt="">
     <div class="about-text reveal reveal-up">
       <h3>A history of excellence.</h3>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima iusto ullam optio sed ab, cumque magni. Fuga molestiae ex error autem voluptate. Laboriosam illo in voluptates, esse voluptas maxime ipsam, molestiae sunt facere facilis nostrum adipisci harum est neque odio tempore earum ratione necessitatibus repellendus cupiditate. Nemo necessitatibus ad atque!</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ab corporis perspiciatis natus, eos officiis ratione amet aliquid voluptatem omnis asperiores nulla quidem iure autem!</p>
       <a class="cta-btn" href="#">Read Our Story</a>
     </div>
   </div>
@@ -42,17 +42,26 @@ import oldLocationImage from '../assets/images/old-location.webp'
 }
 
 .about-text h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
 .about-text p {
-  font-size: 1.25rem;
+  font-weight: 500;
 }
 
 @media (max-width: 768px) {
   .about-grid {
     grid-template-columns: 1fr;
+  }
+  .about-grid img {
+    width: 60%;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-grid img {
+    width: 80%;
   }
 }
 </style>

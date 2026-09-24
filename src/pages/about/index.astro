@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import oldLocationImg from '../../assets/images/old-location.webp'
+import { Content, frontmatter } from './content.md'
+---
+<BaseLayout pageTitle={frontmatter.title}>
+  <section>
+    <div class="container">
+      <img src={oldLocationImg.src} alt="">
+      <div class="content-body">
+        <Content />
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.about-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+img {
+  float: right;
+  width: clamp(20%, 500px, 90%);
+  margin: 0 0 1rem 1rem;
+}
+
+.content-body :global(p) {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.content-body :global(h1) {
+  margin-bottom: 2rem;
+}
+
+.content-body :global(h2) {
+  margin-bottom: 1.5rem;
+}
+</style>

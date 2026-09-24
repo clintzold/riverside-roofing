@@ -2,7 +2,7 @@
 title: "The Ultimate Guide to 2-Ply Modified Bitumen Roofing: Heavy-Duty Protection for Commercial Buildings"
 description: "Discover why 2-ply modified bitumen is the go-to choice for high-traffic commercial roofs. Learn about its cost, multi-layer strength, lifespan, and comparison to single-ply."
 pubDate: 2026-09-08
-author: "Roofing Experts"
+author: "Clint Zold"
 tags: ["commercial roofing", "modified bitumen", "2-ply roofing", "flat roofs", "mod-bit"]
 layout: "../../layouts/MarkdownPostLayout.astro"
 ---

@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import logo from '../../assets/images/demo-logo_preview.png'
+---
+<BaseLayout pageTitle="Comprehensive Commercial Roofing Services">
+  <section id="overview" class="overview-section">
+    <div class="container">
+      <div class="grid-2">
+        <div class="text-card">
+          <h1>Expert Commercial and Flat Top Roofing Services in Windsor, Ontario</h1>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat et odio, eius obcaecati dolore architecto? Debitis magni dolor similique deserunt. Quam rem veritatis ducimus enim aperiam. Totam obcaecati quibusdam distinctio.</p>
+          <h2>Services We Provide:</h2>
+          <ul>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+          </ul>
+          <a href="#" class="cta-btn">Give Us A Call</a>
+        </div>
+        <img class="logo" src={logo.src} alt="">
+      </div>
+    </div>
+  </section>
+  <section id="materials" class="materials-section">
+    <div class="container">
+      <div class="title-container">
+        <span class="reveal reveal-grow"></span><h2 class="section-title reveal reveal-right">Roofing Technologies</h2>
+      </div>
+      <div class="grid-2">
+        <div class="text-card">
+          <h3>A Sound Roof Starts With The Right Materials</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe illum atque tempore porro fugiat quisquam commodi veniam blanditiis rerum? Facilis soluta optio ut id maxime!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.overview-section {
+  background: var(--primary-gray);
+}
+
+.materials-section {
+  background: var(--light-blue);
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+ul {
+  padding-left: 3rem;
+}
+
+.text-card {
+  padding: 1rem;
+}
+.text-card h1, .text-card p, .text-card h2, .text-card h3 {
+  margin-bottom: 1rem;
+}
+
+.logo {
+  width: 80%;
+  place-self: center;
+}
+
+@media (max-width: 480px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+  .logo {
+    grid-row: 1;
+    margin-bottom: 1rem;
+  }
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
+</style>

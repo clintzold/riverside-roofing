@@ -2,14 +2,37 @@
 import tpoImage from '../assets/images/service-tpo.webp'
 import epdmImage from '../assets/images/service-tpdm.webp'
 import bitumenImage from '../assets/images/service-bitumen.webp'
+import newImage from '../assets/icons/building-construction.svg'
+import inspectImage from '../assets/icons/building-check.svg'
+import repairImage from '../assets/icons/repair.svg'
 ---
 <div class="container">
   <div class="title-container">
     <span class="reveal reveal-grow"></span><h2 class="section-title reveal reveal-right">Our Services</h2>
   </div>
-  <p class="tagline-1">You name it. We've done it.</p>
-  <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, id?</p>
-  <div class="services-grid">
+  <div class="description-card">
+    <h3 class="tagline-1">You name it. We've done it.</h3>
+    <p class="tagline">Whether a new commercial roof, insurance claim, repair or complete replacement, Riverside Roofing Inc comes equipped with decades of expertise, knowledge and the best local roofing technicians to handle the job.</p>
+    <div class="flex-container">
+      <div class="service-card reveal reveal-up">
+        <img src={newImage.src} alt="" class="card-icon">
+        <h4>New Builds</h4>
+      </div>
+      <div class="service-card reveal reveal-up">
+        <img src={inspectImage.src} alt="" class="card-icon">
+        <h4>Inspections</h4>
+      </div>
+      <div class="service-card reveal reveal-up">
+        <img src={repairImage.src} alt="" class="card-icon">
+        <h4>Roof Repair & Replacement</h4>
+      </div>
+    </div>
+  </div>
+  <div class="description-card materials">
+    <h3>Modern and Battle-Tested Materials</h3>
+    <p>A wide range of factors play into the decision to use a specific roofing technology. Check out our guides below to compare some of the more commonly used roofing materials to help inform your decision.</p>
+  </div>
+  <div class="articles-grid">
     <div class="card reveal reveal-up">
       <img src={tpoImage.src} alt="" class="card-img">
       <div class="card-body">
@@ -38,36 +61,58 @@ import bitumenImage from '../assets/images/service-bitumen.webp'
 </div>
 
 <style>
-.services-grid {
+.articles-grid {
   gap: 30px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.tagline {
-  font-size: 1.5rem;
+.description-card {
+  width: clamp(25%, 650px, 90%);
+}
+
+.flex-container {
+  display: flex;
+}
+
+.description-card p {
+  font-size: 1.3rem;
   margin-bottom: 25px;
 }
 
-.tagline-1 {
-  font-size: 2.25rem;
+.description-card h3 {
+  font-size: 2rem;
   margin-bottom: 1rem;
   font-weight: bold;
   font-family: 'Roboto';
   color: var(--primary-blue);
 }
 
+.materials {
+  padding-top: 5rem;
+}
+
+.service-card {
+  width: clamp(25%, 200px 30%);
+  display: flex;
+  flex-direction: column;
+  color: var(--primary-blue);
+}
+
+.card-icon {
+  width: clamp(30%, 50px, 80%);
+}
 
 .card h3 {
   margin-bottom: 10px;
 }
 @media (max-width: 768px) {
-  .services-grid {
+  .articles-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
 @media (max-width: 480px) {
-  .services-grid {
+  .articles-grid {
     grid-template-columns: 1fr;
   }
 }

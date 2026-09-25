@@ -10,22 +10,27 @@ import repairImage from '../assets/icons/repair.svg'
   <div class="title-container">
     <span class="reveal reveal-grow"></span><h2 class="section-title reveal reveal-right">Our Services</h2>
   </div>
-  <div class="description-card">
-    <h3 class="tagline-1">You name it. We've done it.</h3>
-    <p class="tagline">Whether a new commercial roof, insurance claim, repair or complete replacement, Riverside Roofing Inc comes equipped with decades of expertise, knowledge and the best local roofing technicians to handle the job.</p>
-    <div class="flex-container">
-      <div class="service-card reveal reveal-up">
-        <img src={newImage.src} alt="" class="card-icon">
-        <h4>New Builds</h4>
+  <div class="services-grid">
+    <div class="description-card">
+      <h3>You name it. We've done it.</h3>
+      <p>Whether a new commercial roof, insurance claim, repair or complete replacement, Riverside Roofing Inc comes equipped with decades of expertise, knowledge and the best local roofing technicians to handle the job.</p>
+      <div class="flex-container">
+        <div class="service-card reveal reveal-up">
+          <img src={newImage.src} alt="" class="card-icon">
+          <p>New Builds</p>
+        </div>
+        <div class="service-card reveal reveal-up">
+          <img src={inspectImage.src} alt="" class="card-icon">
+          <p>Inspections</p>
+        </div>
+        <div class="service-card reveal reveal-up">
+          <img src={repairImage.src} alt="" class="card-icon">
+          <p>Roof Repair & Replacement</p>
+        </div>
       </div>
-      <div class="service-card reveal reveal-up">
-        <img src={inspectImage.src} alt="" class="card-icon">
-        <h4>Inspections</h4>
-      </div>
-      <div class="service-card reveal reveal-up">
-        <img src={repairImage.src} alt="" class="card-icon">
-        <h4>Roof Repair & Replacement</h4>
-      </div>
+    </div>
+    <div class="cta-container">
+      <a class="cta-btn" href="#">See More Of What We Do</a>
     </div>
   </div>
   <div class="description-card materials">
@@ -61,6 +66,12 @@ import repairImage from '../assets/icons/repair.svg'
 </div>
 
 <style>
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  overflow: hidden;
+}
 .articles-grid {
   gap: 30px;
   display: grid;
@@ -68,11 +79,32 @@ import repairImage from '../assets/icons/repair.svg'
 }
 
 .description-card {
-  width: clamp(25%, 650px, 90%);
+  width: clamp(25%, 650px, 100%);
 }
 
 .flex-container {
+  width: 60%;
   display: flex;
+}
+
+.cta-container .cta-btn {
+  position: relative;
+  font-weight: bold;
+  font-size: 1.5rem;
+  place-self: center;
+  padding: 2rem 3rem 2rem 2rem;
+  margin-top: 0;
+}
+.cta-container .cta-btn::after {
+  content: "\203a";
+  font-size: 3rem;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-55%);
+}
+.cta-container {
+  place-self: center;
 }
 
 .description-card p {
@@ -92,11 +124,9 @@ import repairImage from '../assets/icons/repair.svg'
   padding-top: 5rem;
 }
 
-.service-card {
-  width: clamp(25%, 200px 30%);
-  display: flex;
-  flex-direction: column;
-  color: var(--primary-blue);
+.service-card p {
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .card-icon {
@@ -110,10 +140,20 @@ import repairImage from '../assets/icons/repair.svg'
   .articles-grid {
     grid-template-columns: 1fr 1fr;
   }
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .flex-container {
+    width: 100%;
+  }
 }
 @media (max-width: 480px) {
   .articles-grid {
     grid-template-columns: 1fr;
+  }
+  .cta-container .cta-btn {
+    font-size: 1rem;
+    padding: 1rem 2.25rem 1rem 1.5rem;
   }
 }
 </style>

@@ -1,0 +1,106 @@
+---
+---
+<div class="container">
+  <h3 class="testimonial-heading reveal reveal-up">Our Clients Say It Best</h3>
+  <div class="testimonial-grid">
+    <div class="testimonial-card reveal reveal-up">
+      <p class="testimonial">
+        Riverside did a great job on our TPO roof for Racicot Chrysler here in Amherstburgh. Everything went smoothly and the job was done in a timely and clean manner that didn't disrupt our sales.
+      </p>
+      <div class="credit">
+        <p class="testimonial-author">
+          <em>Jim Racicot</em>
+        </p>
+        <div class="stars">★★★★★</div>
+      </div>
+    </div>
+    <div class="testimonial-card reveal reveal-up">
+      <p class="testimonial">
+        Riverside did a great job on our TPO roof for Racicot Chrysler here in Amherstburgh. Everything went smoothly and the job was done in a timely and clean manner that didn't disrupt our sales.
+      </p>
+      <div class="credit">
+        <p class="testimonial-author">
+          <em>Jim Racicot</em>
+        </p>
+        <div class="stars">★★★★★</div>
+      </div>
+    </div>
+    <div class="testimonial-card reveal reveal-up">
+      <p class="testimonial">
+        Riverside did a great job on our TPO roof for Racicot Chrysler here in Amherstburgh. Everything went smoothly and the job was done in a timely and clean manner that didn't disrupt our sales.
+      </p>
+      <div class="credit">
+        <p class="testimonial-author">
+          <em>Jim Racicot</em>
+        </p>
+        <div class="stars">★★★★★</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.testimonial-heading {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: white;
+  font-size: 1.5rem;
+  font-style: italic;
+}
+.container {
+  padding: 6rem 0 2rem 0;
+}
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.testimonial-card {
+  position: relative;
+  padding: 4rem 0 1rem 2rem;
+}
+
+.testimonial-card::after {
+  position: absolute;
+  content: "“";
+  top: 0;
+  left: 0;
+  font-size: 6rem;
+  color: white;
+  font-style: italic;
+}
+
+.testimonial {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: white;
+}
+
+.credit {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.stars {
+  font-size: 2rem;
+  color: gold;
+}
+
+.testimonial-author {
+  color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+@media (max-width: 480px) {
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+  .container {
+    padding-top: 3rem;
+  }
+}
+
+</style>

@@ -11,13 +11,10 @@ import logo from '../../assets/images/demo-logo_preview.png'
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat et odio, eius obcaecati dolore architecto? Debitis magni dolor similique deserunt. Quam rem veritatis ducimus enim aperiam. Totam obcaecati quibusdam distinctio.</p>
           <h2>Services We Provide:</h2>
           <ul>
-            <li>Lorem, ipsum dolor.</li>
-            <li>Lorem, ipsum dolor.</li>
-            <li>Lorem, ipsum dolor.</li>
-            <li>Lorem, ipsum dolor.</li>
-            <li>Lorem, ipsum dolor.</li>
-            <li>Lorem, ipsum dolor.</li>
-            <li>Lorem, ipsum dolor.</li>
+            <li><a href="#">Flat-Top Roofing</a></li>
+            <li><a href="#">Emergency Roof Repairs</a></li>
+            <li><a href="#">Insurance Claims</a></li>
+            <li><a href="#">Roof Assessments</a></li>
           </ul>
           <a href="#" class="cta-btn">Give Us A Call</a>
         </div>
@@ -55,6 +52,22 @@ import logo from '../../assets/images/demo-logo_preview.png'
 
 ul {
   padding-left: 3rem;
+  list-style-type: none;
+}
+
+li a {
+  padding: 1rem 4rem 1rem 2rem;
+  background-color: var(--primary-red);
+  color: white;
+  display: inline-block;
+  width: clamp(10%, 200px, 80%);
+  text-decoration: none;
+  font-family: 'Roboto';
+  font-weight: bold;
+}
+
+li {
+  margin-bottom: 0.5rem;
 }
 
 .text-card {

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
+import Contact from '../../components/Contact.astro'
 import logo from '../../assets/images/demo-logo_preview.png'
 import tpoImage from '../../assets/images/service-tpo.webp'
 import epdmImage from '../../assets/images/service-tpdm.webp'
@@ -76,12 +77,48 @@ import bitumenImage from '../../assets/images/service-bitumen.webp'
       <div class="title-container">
         <span class="reveal reveal-grow"></span><h2 class="section-title reveal reveal-right">Roof Replacement</h2>
       </div>
-    </div>
-    <div class="grid-2">
-      <div class="text-card">
-        <h3></h3>
+      <div class="grid-2">
+        <div class="text-card">
+          <h3>Heading 3</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quia, dignissimos veniam sapiente nam, vitae numquam mollitia quaerat nobis eum enim, nemo optio recusandae ratione?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quia, dignissimos veniam sapiente nam, vitae numquam mollitia quaerat nobis eum enim, nemo optio recusandae ratione?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quia, dignissimos veniam sapiente nam, vitae numquam mollitia quaerat nobis eum enim, nemo optio recusandae ratione?</p>
+        </div>
       </div>
     </div>
+  </section>
+  <section id="emergency-repairs" class="emergency-repairs-section">
+    <div class="container">
+      <div class="title-container">
+        <span class="reveal reveal-grow"></span><h2 class="section-title reveal reveal-right">Emergency Repairs</h2>
+      </div>
+      <div class="grid-2">
+        <div class="text-card">
+          <h3>Heading 3</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quia, dignissimos veniam sapiente nam, vitae numquam mollitia quaerat nobis eum enim, nemo optio recusandae ratione?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quia, dignissimos veniam sapiente nam, vitae numquam mollitia quaerat nobis eum enim, nemo optio recusandae ratione?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quia, dignissimos veniam sapiente nam, vitae numquam mollitia quaerat nobis eum enim, nemo optio recusandae ratione?</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="roof-assessments" class="roof-assessments-section">
+    <div class="container">
+      <div class="title-container">
+        <span class="reveal reveal-grow"></span><h2 class="section-title reveal reveal-right">Roof Assessments</h2>
+      </div>
+      <div class="grid-2">
+        <div class="text-card">
+          <h3>Heading 3</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quia, dignissimos veniam sapiente nam, vitae numquam mollitia quaerat nobis eum enim, nemo optio recusandae ratione?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quia, dignissimos veniam sapiente nam, vitae numquam mollitia quaerat nobis eum enim, nemo optio recusandae ratione?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quia, dignissimos veniam sapiente nam, vitae numquam mollitia quaerat nobis eum enim, nemo optio recusandae ratione?</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contact-us" class="contact-section">
+    <Contact/>
   </section>
 </BaseLayout>
 
@@ -90,7 +127,11 @@ import bitumenImage from '../../assets/images/service-bitumen.webp'
   background: var(--primary-gray);
 }
 
-.commercial-roofing-section {
+.roof-replacement-section {
+}
+
+.contact-section {
+  background: var(--light-blue);
 }
 
 .grid-2 {

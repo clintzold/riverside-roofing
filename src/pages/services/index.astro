@@ -1,6 +1,9 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import logo from '../../assets/images/demo-logo_preview.png'
+import tpoImage from '../../assets/images/service-tpo.webp'
+import epdmImage from '../../assets/images/service-tpdm.webp'
+import bitumenImage from '../../assets/images/service-bitumen.webp'
 ---
 <BaseLayout pageTitle="Comprehensive Commercial Roofing Services">
   <section id="overview" class="overview-section">
@@ -11,27 +14,67 @@ import logo from '../../assets/images/demo-logo_preview.png'
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat et odio, eius obcaecati dolore architecto? Debitis magni dolor similique deserunt. Quam rem veritatis ducimus enim aperiam. Totam obcaecati quibusdam distinctio.</p>
           <h2>Services We Provide:</h2>
           <ul>
-            <li><a href="#">Flat-Top Roofing</a></li>
-            <li><a href="#">Emergency Roof Repairs</a></li>
-            <li><a href="#">Insurance Claims</a></li>
+            <li><a href="#">Commercial Roofing</a></li>
+            <li><a href="#">Emergency Repairs</a></li>
+            <li><a href="#">Roof Replacement</a></li>
             <li><a href="#">Roof Assessments</a></li>
           </ul>
+          <h3>Not sure what you're looking for or just need some advice? Give us a call and we'd be happy to chat.</h3>
           <a href="#" class="cta-btn">Give Us A Call</a>
         </div>
         <img class="logo" src={logo.src} alt="">
       </div>
     </div>
   </section>
-  <section id="materials" class="materials-section">
+  <section id="commercial-roofing" class="commercial-roofing-section">
     <div class="container">
       <div class="title-container">
-        <span class="reveal reveal-grow"></span><h2 class="section-title reveal reveal-right">Roofing Technologies</h2>
+        <span class="reveal reveal-grow"></span><h2 class="section-title reveal reveal-right">Commercial Roofing</h2>
       </div>
       <div class="grid-2">
-        <div class="text-card">
+        <div class="text-card roboto">
           <h3>A Sound Roof Starts With The Right Materials</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe illum atque tempore porro fugiat quisquam commodi veniam blanditiis rerum? Facilis soluta optio ut id maxime!</p>
+          <p>There are many material options to select from when choosing a roof for your commercial building. Each has it's pros and cons depending on budget, climate and use case - feel free to browse our guides below to some popular and time-tested options.</p>
         </div>
+      </div>
+      <div class="grid-3 roboto materials-grid">
+        <div class="card reveal reveal-up">
+          <img src={tpoImage.src} alt="" class="card-img">
+          <div class="card-body">
+            <h3>TPO Roofing</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium dolorum possimus atque, inventore itaque maiores nisi id quae voluptatem amet aut eligendi vitae similique dicta?</p>
+            <a class="cta-btn" href=`${import.meta.env.BASE_URL}/articles/tpo`>More About TPO</a>
+          </div>
+        </div>
+        <div class="card reveal reveal-up">
+          <img src={epdmImage.src} alt="" class="card-img">
+          <div class="card-body">
+            <h3>EPDM Roofing</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium dolorum possimus atque, inventore itaque maiores nisi id quae voluptatem amet aut eligendi vitae similique dicta?</p>
+            <a class="cta-btn" href=`${import.meta.env.BASE_URL}/articles/epdm`>More About EPDM</a>
+          </div>
+        </div>
+        <div class="card reveal reveal-up">
+          <img src={bitumenImage.src} alt="" class="card-img">
+          <div class="card-body">
+            <h3>2-Ply Bitumen Roofing</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium dolorum possimus atque, inventore itaque maiores nisi id quae voluptatem amet aut eligendi vitae similique dicta?</p>
+            <a class="cta-btn" href=`${import.meta.env.BASE_URL}/articles/bitumen`>More About Bitumen</a>
+          </div>
+        </div>
+      </div>
+      <div class="grid-2 roboto">
+        <div class="text-card">
+          <h3>Build It To Last With The Top Professionals</h3>
+          <p>Tradesmen that have decades of experience working with commerical roofing products in a variety of scenarios install roofs that meet or exceed their expected lifetimes - period. Riverside knows this and that's why we have built a team of the best roofers that know how to bring it all together to leave our clients satisfied and in a timely manner.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="roof-replacement" class="roof-replacement-section">
+    <div class="container">
+      <div class="title-container">
+        <span class="reveal reveal-grow"></span><h2 class="section-title reveal reveal-right">Roof Replacement</h2>
       </div>
     </div>
   </section>
@@ -42,12 +85,23 @@ import logo from '../../assets/images/demo-logo_preview.png'
   background: var(--primary-gray);
 }
 
-.materials-section {
-  background: var(--light-blue);
+.commercial-roofing-section {
 }
+
 .grid-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+.grid-3 {
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.materials-grid {
+  padding-bottom: 5rem;
 }
 
 ul {
@@ -73,8 +127,12 @@ li {
 .text-card {
   padding: 1rem;
 }
-.text-card h1, .text-card p, .text-card h2, .text-card h3 {
+.text-card h1, .text-card p, .text-card h2 {
   margin-bottom: 1rem;
+}
+
+.text-card h3, .card-body h3 {
+  margin-bottom: 0.5rem;
 }
 
 .logo {

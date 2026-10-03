@@ -84,6 +84,12 @@ section {
   
 }
 
+/* Fonts */
+
+.roboto {
+  font-family: 'Roboto';
+}
+
 /* Effects & Animations */
 .reveal-up {
   opacity: 0;

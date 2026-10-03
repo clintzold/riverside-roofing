@@ -77,6 +77,11 @@ import bitumenImage from '../../assets/images/service-bitumen.webp'
         <span class="reveal reveal-grow"></span><h2 class="section-title reveal reveal-right">Roof Replacement</h2>
       </div>
     </div>
+    <div class="grid-2">
+      <div class="text-card">
+        <h3></h3>
+      </div>
+    </div>
   </section>
 </BaseLayout>
 
@@ -110,11 +115,11 @@ ul {
 }
 
 li a {
-  padding: 1rem 4rem 1rem 2rem;
+  padding: 1rem 0 1rem 2rem;
   background-color: var(--primary-red);
   color: white;
   display: inline-block;
-  width: clamp(10%, 200px, 80%);
+  width: clamp(10%, 250px, 80%);
   text-decoration: none;
   font-family: 'Roboto';
   font-weight: bold;
@@ -141,7 +146,7 @@ li {
 }
 
 @media (max-width: 480px) {
-  .grid-2 {
+  .grid-2, .grid-3 {
     grid-template-columns: 1fr;
   }
   .logo {
@@ -150,6 +155,11 @@ li {
   }
   .section-title {
     font-size: 1.5rem;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
   }
 }
 </style>

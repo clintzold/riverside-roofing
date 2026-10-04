@@ -122,6 +122,10 @@ p {
   margin-bottom: 0.75rem;
 }
 
+.text-center {
+  text-align: center;
+}
+
 /* Effects & Animations */
 .reveal-up {
   opacity: 0;

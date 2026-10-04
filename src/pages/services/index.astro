@@ -7,6 +7,9 @@ import epdmImage from '../../assets/images/service-tpdm.webp'
 import bitumenImage from '../../assets/images/service-bitumen.webp'
 
 import waterDamageImage from '../../assets/images/water-damage.jpg'
+import windIcon from '../../assets/icons/wind.svg'
+import rainIcon from '../../assets/icons/rain.svg'
+import fireIcon from '../../assets/icons/fire.svg'
 ---
 <BaseLayout pageTitle="Comprehensive Commercial Roofing Services">
   <section id="overview" class="overview-section">
@@ -99,7 +102,22 @@ import waterDamageImage from '../../assets/images/water-damage.jpg'
           <h3>Is Your Building In Need Of A Roofing Rescue?</h3>
           <p>Few things can disrupt business and damage your building as much an unexpected leak. From ceiling tiles and drywall to critical assets, electrical components and equipment - much can be lost in a short amount of time.</p>
           <p>If your roof has been damaged or improperly installed <strong>it is imperative to have an immediate assessment</strong> and <strong>professional repair completed</strong> before ceilings, assets and walls are damaged.</p>
-          <p>The more damage is done, the longer it may take to repair not just the roof but the internal components of your building.</p>
+          <div class="icon-collection">
+            <div class="icon-container">
+              <img src={windIcon.src} alt="">
+              <p>Wind</p>
+            </div>
+            <div class="icon-container">
+              <img src={rainIcon.src} alt="">
+              <p>Rain</p>
+            </div>
+            <div class="icon-container">
+              <img src={fireIcon.src} alt="">
+              <p>Fire</p>
+            </div>
+          </div>
+          <h4>A Quick Response Is Essential</h4>
+          <p>The more damage is done, the longer it may take to repair not just the roof but the internal components of your building - costing you valuable time and money.</p>
         </div>
         <img src={waterDamageImage.src} alt="" class="service-img">
         <div class="service-response-card">
@@ -187,6 +205,24 @@ li {
 
 .service-response-card {
   padding: 2rem 1rem 1rem 1rem;
+}
+
+.icon-collection {
+  display: flex;
+  gap: 2rem;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+  font-size: 0.75rem;
+  color: var(--primary-blue);
+}
+
+.icon-container img {
+  width: 50px;
 }
 
 .text-card {

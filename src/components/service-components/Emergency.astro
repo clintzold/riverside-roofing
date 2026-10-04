@@ -72,20 +72,19 @@ import fireIcon from '../../assets/icons/fire.svg'
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding-bottom: 50px;
+  gap: 3rem;
 }
 
 .cta-card {
   width: clamp(10%, 500px, 80%);
   padding: 1rem;
-  border-radius: 15px;
   border: 5px solid var(--primary-blue);
-  background: var(--light-blue);
+  background: white;
 }
 
 @media (max-width: 480px) {
   .grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
   }
 
   .service-img {

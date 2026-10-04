@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import Contact from '../../components/Contact.astro'
+import Emergency from '../../components/service-components/Emergency.astro'
 import logo from '../../assets/images/demo-logo_preview.png'
 import tpoImage from '../../assets/images/service-tpo.webp'
 import epdmImage from '../../assets/images/service-tpdm.webp'
@@ -93,38 +94,7 @@ import fireIcon from '../../assets/icons/fire.svg'
     </div>
   </section>
   <section id="emergency-repairs" class="emergency-repairs-section">
-    <div class="container">
-      <div class="title-container">
-        <span class="reveal reveal-grow"></span><h2 class="section-title reveal reveal-right">Emergency Repairs</h2>
-      </div>
-      <div class="grid-2">
-        <div class="text-card">
-          <h3>Is Your Building In Need Of A Roofing Rescue?</h3>
-          <p>Few things can disrupt business and damage your building as much an unexpected leak. From ceiling tiles and drywall to critical assets, electrical components and equipment - much can be lost in a short amount of time.</p>
-          <p>If your roof has been damaged or improperly installed <strong>it is imperative to have an immediate assessment</strong> and <strong>professional repair completed</strong> before ceilings, assets and walls are damaged.</p>
-          <div class="icon-collection">
-            <div class="icon-container">
-              <img src={windIcon.src} alt="">
-              <p>Wind</p>
-            </div>
-            <div class="icon-container">
-              <img src={rainIcon.src} alt="">
-              <p>Rain</p>
-            </div>
-            <div class="icon-container">
-              <img src={fireIcon.src} alt="">
-              <p>Fire</p>
-            </div>
-          </div>
-        </div>
-        <img src={waterDamageImage.src} alt="" class="service-img">
-        <div class="service-response-card shadow">
-          <h3>Book An Emergency Assessment Today</h3>
-          <p>Riverside Roofing Inc provides <strong>prompt, honest</strong> and <strong>accurate</strong> roof assessment and repair services to quickly restore your operations and peace of mind.</p>
-          <a href="#" class="cta-btn">Save Your Roof</a>
-        </div>
-      </div>
-    </div>
+    <Emergency/>
   </section>
   <section id="roof-assessments" class="roof-assessments-section">
     <div class="container">
@@ -139,7 +109,6 @@ import fireIcon from '../../assets/icons/fire.svg'
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quia, dignissimos veniam sapiente nam, vitae numquam mollitia quaerat nobis eum enim, nemo optio recusandae ratione?</p>
         </div>
         <div class="service-response-card">
-          <img src={waterDamageImage.src} alt="" class="service-img">
         </div>
       </div>
     </div>
@@ -197,34 +166,6 @@ li {
   margin-bottom: 0.5rem;
 }
 
-.service-img {
-  width: clamp(10%, 500px, 80%);
-}
-
-.service-response-card {
-  padding: 2rem 1rem 1rem 1rem;
-  background: white;
-  border: 5px solid var(--primary-blue);
-  border-radius: 15px;
-}
-
-.icon-collection {
-  display: flex;
-  gap: 2rem;
-}
-
-.icon-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-weight: bold;
-  font-size: 0.75rem;
-  color: var(--primary-blue);
-}
-
-.icon-container img {
-  width: 50px;
-}
 
 .text-card {
   padding: 1rem;

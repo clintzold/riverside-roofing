@@ -38,7 +38,7 @@ section {
 }
 */
 
-/* Layouts */
+/* Layout */
 
 .container {
   max-width: 1200px;
@@ -49,6 +49,14 @@ section {
 .grid-center {
   place-items: center;
 }
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
 /* Cards */
 
 .card {
@@ -58,6 +66,11 @@ section {
 
 .shadow {
   box-shadow: 3px 3px 15px rgba(128, 128, 128, 0.2);
+}
+
+/* Cards */
+.text-card {
+  padding: 1rem;
 }
 
 .card-img {
@@ -98,6 +111,15 @@ section {
 
 .roboto {
   font-family: 'Roboto';
+}
+
+/* Text */
+h3 {
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 0.75rem;
 }
 
 /* Effects & Animations */

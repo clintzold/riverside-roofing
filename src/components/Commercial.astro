@@ -1,0 +1,142 @@
+---
+import epdmImage from '../assets/images/service-tpdm.webp'
+import bitumenImage from '../assets/images/service-bitumen.webp'
+import tpoImage from '../assets/images/service-tpo.webp'
+---
+
+<div class="container">
+  <div class="title-container">
+    <span class="reveal reveal-grow"></span><h2 class="section-title reveal reveal-right">Commercial Roofing</h2>
+  </div>
+  <div class="text-card roboto">
+    <h3>Build It Right With The Top Experts</h3>
+    <p>Roofing Technicians with decades of experience under their belts build better roofs - period.</p>
+    <p>
+      At <strong>Riverside Roofing Inc</strong>, we know well-paid and well-trained professionals are the first step in ensuring our clients receive a roof that meets or exceeds it's expected lifespan. 
+      That's why only the best make it into our crews. 
+    </p>
+    <p>Our technicians are men that have worked together for years as a team - led by supervisors known and employed by our family for decades. This ensures that your <strong>roof is secure</strong> and the job <strong>completed on time</strong>.</p>
+  </div>
+  <div class="text-card">
+    <h3>A Sound Roof Begins With The Right Materials</h3>
+    <p>Choosing the right roofing system and materials for your building involves many factors such as the slope of your roof, expected level of foot-traffic, HVAC equipment and budget.</p>
+    <p>Our helpful guides to the most commonly installed systems below are a great starting point in making the right choice for your roof!</p>
+  </div>
+  <div class="systems-collection">
+    <div class="text-card">
+      <h3>Low-Slope and Flat-Top Membranes</h3>
+    </div>
+    <div class="articles-grid">
+      <div class="card reveal reveal-up">
+        <img src={tpoImage.src} alt="" class="card-img">
+        <div class="card-body">
+          <h4>TPO Roofing</h4>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium dolorum possimus atque, inventore itaque maiores nisi id quae voluptatem amet aut eligendi vitae similique dicta?</p>
+          <a class="cta-btn" href=`${import.meta.env.BASE_URL}/articles/tpo`>More About TPO</a>
+        </div>
+      </div>
+      <div class="card reveal reveal-up">
+        <img src={epdmImage.src} alt="" class="card-img">
+        <div class="card-body">
+          <h4>EPDM Roofing</h4>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium dolorum possimus atque, inventore itaque maiores nisi id quae voluptatem amet aut eligendi vitae similique dicta?</p>
+          <a class="cta-btn" href=`${import.meta.env.BASE_URL}/articles/epdm`>More About EPDM</a>
+        </div>
+      </div>
+      <div class="card reveal reveal-up">
+        <img src={bitumenImage.src} alt="" class="card-img">
+        <div class="card-body">
+          <h4>2-Ply Bitumen Roofing</h4>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium dolorum possimus atque, inventore itaque maiores nisi id quae voluptatem amet aut eligendi vitae similique dicta?</p>
+          <a class="cta-btn" href=`${import.meta.env.BASE_URL}/articles/bitumen`>More About Bitumen</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="systems-collection">
+    <div class="text-card">
+      <h3>Metal Roofing For Sloped Applications</h3>
+    </div>
+    <div class="articles-grid">
+      <div class="card reveal reveal-up">
+        <img src={tpoImage.src} alt="" class="card-img">
+        <div class="card-body">
+          <h4>Steel Roofing</h4>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium dolorum possimus atque, inventore itaque maiores nisi id quae voluptatem amet aut eligendi vitae similique dicta?</p>
+          <a class="cta-btn" href=`${import.meta.env.BASE_URL}/articles/tpo`>More About Steel</a>
+        </div>
+      </div>
+      <div class="card reveal reveal-up">
+        <img src={epdmImage.src} alt="" class="card-img">
+        <div class="card-body">
+          <h4>Aluminum Roofing</h4>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium dolorum possimus atque, inventore itaque maiores nisi id quae voluptatem amet aut eligendi vitae similique dicta?</p>
+          <a class="cta-btn" href=`${import.meta.env.BASE_URL}/articles/epdm`>More About Aluminum</a>
+        </div>
+      </div>
+      <div class="card reveal reveal-up">
+        <img src={bitumenImage.src} alt="" class="card-img">
+        <div class="card-body">
+          <h4>Copper Roofing</h4>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium dolorum possimus atque, inventore itaque maiores nisi id quae voluptatem amet aut eligendi vitae similique dicta?</p>
+          <a class="cta-btn" href=`${import.meta.env.BASE_URL}/articles/bitumen`>More About Copper</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cta-card">
+    <p><strong>Still not sure where to begin?</strong> Let us guide you through the process by giving us a call or completing our simple contact form.</p>
+    <a href="#" class="cta-btn">Contact Us</a>
+  </div>
+</div>
+
+<style>
+h3, p {
+}
+
+.cta-card {
+  text-align: center;
+  width: clamp(25%, 450px, 80%);
+  background: var(--light-blue);
+  border: 4px solid var(--primary-blue);
+  border-radius: 15px;
+  margin-top: 5rem;
+  margin-inline: auto;
+  padding: 1rem;
+  font-weight: 500;
+}
+
+.text-card {
+  width: clamp(50%, 500px, 90%);
+}
+
+.articles-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0 2rem;
+  gap: 10px;
+}
+
+.systems-collection {
+  margin-top: 3rem;
+}
+
+.card h4 {
+  font-size: 0.9rem;
+}
+.card-body {
+  font-size: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .articles-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .articles-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>

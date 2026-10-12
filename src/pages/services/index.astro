@@ -1,16 +1,9 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import Contact from '../../components/Contact.astro'
+import Commercial from '../../components/Commercial.astro'
 import Emergency from '../../components/service-components/Emergency.astro'
 import logo from '../../assets/images/demo-logo_preview.png'
-import tpoImage from '../../assets/images/service-tpo.webp'
-import epdmImage from '../../assets/images/service-tpdm.webp'
-import bitumenImage from '../../assets/images/service-bitumen.webp'
-
-import waterDamageImage from '../../assets/images/water-damage.jpg'
-import windIcon from '../../assets/icons/wind.svg'
-import rainIcon from '../../assets/icons/rain.svg'
-import fireIcon from '../../assets/icons/fire.svg'
 ---
 <BaseLayout pageTitle="Comprehensive Commercial Roofing Services">
   <section id="overview" class="overview-section">
@@ -22,65 +15,23 @@ import fireIcon from '../../assets/icons/fire.svg'
           <h2>Services We Provide:</h2>
           <ul>
             <li><a href="#">Commercial Roofing</a></li>
-            <li><a href="#">Emergency Repairs</a></li>
             <li><a href="#">Roof Replacement</a></li>
-            <li><a href="#">Roof Assessments</a></li>
+            <li><a href="#">Emergency Repairs</a></li>
+            <li><a href="#">Roof Maintenace</a></li>
           </ul>
         </div>
         <img class="logo" src={logo.src} alt="">
       </div>
       <div class="flex justify-center">
         <div class="text-card text-center cta-card">
-          <h3>Not sure what you're looking for or just need some advice? Give us a call and we'd be happy to chat.</h3>
+          <p>Not sure what you're looking for or just need some advice? Give us a call and we'd be happy to chat.</p>
           <a href="#" class="cta-btn">Give Us A Call</a>
         </div>
       </div>
     </div>
   </section>
   <section id="commercial-roofing" class="commercial-roofing-section">
-    <div class="container">
-      <div class="title-container">
-        <span class="reveal reveal-grow"></span><h2 class="section-title reveal reveal-right">Commercial Roofing</h2>
-      </div>
-      <div class="grid-2">
-        <div class="text-card roboto">
-          <h3>A Sound Roof Starts With The Right Materials</h3>
-          <p>There are many material options to select from when choosing a roof for your commercial building. Each has it's pros and cons depending on budget, climate and use case - feel free to browse our guides below to some popular and time-tested options.</p>
-        </div>
-      </div>
-      <div class="grid-3 roboto materials-grid">
-        <div class="card reveal reveal-up">
-          <img src={tpoImage.src} alt="" class="card-img">
-          <div class="card-body">
-            <h3>TPO Roofing</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium dolorum possimus atque, inventore itaque maiores nisi id quae voluptatem amet aut eligendi vitae similique dicta?</p>
-            <a class="cta-btn" href=`${import.meta.env.BASE_URL}/articles/tpo`>More About TPO</a>
-          </div>
-        </div>
-        <div class="card reveal reveal-up">
-          <img src={epdmImage.src} alt="" class="card-img">
-          <div class="card-body">
-            <h3>EPDM Roofing</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium dolorum possimus atque, inventore itaque maiores nisi id quae voluptatem amet aut eligendi vitae similique dicta?</p>
-            <a class="cta-btn" href=`${import.meta.env.BASE_URL}/articles/epdm`>More About EPDM</a>
-          </div>
-        </div>
-        <div class="card reveal reveal-up">
-          <img src={bitumenImage.src} alt="" class="card-img">
-          <div class="card-body">
-            <h3>2-Ply Bitumen Roofing</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium dolorum possimus atque, inventore itaque maiores nisi id quae voluptatem amet aut eligendi vitae similique dicta?</p>
-            <a class="cta-btn" href=`${import.meta.env.BASE_URL}/articles/bitumen`>More About Bitumen</a>
-          </div>
-        </div>
-      </div>
-      <div class="grid-2 roboto">
-        <div class="text-card">
-          <h3>Build It To Last With The Top Professionals</h3>
-          <p>Tradesmen that have decades of experience working with commerical roofing products in a variety of scenarios install roofs that meet or exceed their expected lifetimes - period. Riverside knows this and that's why we have built a team of the best roofers that know how to bring it all together to leave our clients satisfied and in a timely manner.</p>
-        </div>
-      </div>
-    </div>
+    <Commercial/>
   </section>
   <section id="roof-replacement" class="roof-replacement-section">
     <div class="container">
@@ -103,7 +54,7 @@ import fireIcon from '../../assets/icons/fire.svg'
   <section id="roof-assessments" class="roof-assessments-section">
     <div class="container">
       <div class="title-container">
-        <span class="reveal reveal-grow"></span><h2 class="section-title reveal reveal-right">Roof Assessments</h2>
+        <span class="reveal reveal-grow"></span><h2 class="section-title reveal reveal-right">Maintenance</h2>
       </div>
       <div class="grid-2">
         <div class="text-card">
@@ -187,11 +138,12 @@ li {
 }
 
 .cta-card {
-  width: clamp(25%, 500px, 80%);
+  width: clamp(25%, 450px, 80%);
   background: var(--light-blue);
   border: 4px solid var(--primary-blue);
   border-radius: 15px;
   margin-top: 5rem;
+  font-weight: 500;
 }
 
 .logo {

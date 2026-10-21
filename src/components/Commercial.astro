@@ -2,25 +2,31 @@
 import epdmImage from '../assets/images/service-tpdm.webp'
 import bitumenImage from '../assets/images/service-bitumen.webp'
 import tpoImage from '../assets/images/service-tpo.webp'
+import medallionImage from '../assets/images/70-years-medallion.png'
 ---
 
 <div class="container">
   <div class="title-container">
     <span class="reveal reveal-grow"></span><h2 class="section-title reveal reveal-right">Commercial Roofing</h2>
   </div>
-  <div class="text-card roboto">
-    <h3>Build It Right With The Top Experts</h3>
-    <p>Roofing Technicians with decades of experience under their belts build better roofs - period.</p>
-    <p>
-      At <strong>Riverside Roofing Inc</strong>, we know well-paid and well-trained professionals are the first step in ensuring our clients receive a roof that meets or exceeds it's expected lifespan. 
-      That's why only the best make it into our crews. 
-    </p>
-    <p>Our technicians are men that have worked together for years as a team - led by supervisors known and employed by our family for decades. This ensures that your <strong>roof is secure</strong> and the job <strong>completed on time</strong>.</p>
-  </div>
-  <div class="text-card">
-    <h3>A Sound Roof Begins With The Right Materials</h3>
-    <p>Choosing the right roofing system and materials for your building involves many factors such as the slope of your roof, expected level of foot-traffic, HVAC equipment and budget.</p>
-    <p>Our helpful guides to the most commonly installed systems below are a great starting point in making the right choice for your roof!</p>
+  <div class="main-grid">
+    <div class="text-section">
+      <div class="text-card roboto">
+        <h3>Build It Right With The Top Experts</h3>
+        <p>Roofing Technicians with decades of experience under their belts build better roofs - period.</p>
+        <p>
+          At <strong>Riverside Roofing Inc</strong>, we know well-paid and well-trained professionals are the first step in ensuring our clients receive a roof that meets or exceeds it's expected lifespan. 
+          That's why only the best make it into our crews. 
+        </p>
+        <p>Our technicians are men that have worked together for years as a team - led by supervisors known and employed by our family for decades. This ensures that your <strong>roof is secure</strong> and the job <strong>completed on time</strong>.</p>
+      </div>
+      <div class="text-card">
+        <h3>A Sound Roof Begins With The Right Materials</h3>
+        <p>Choosing the right roofing system and materials for your building involves many factors such as the slope of your roof, expected level of foot-traffic, HVAC equipment and budget.</p>
+        <p>Our helpful guides to the most commonly installed systems below are a great starting point in making the right choice for your roof!</p>
+      </div>
+    </div>
+    <img src={medallionImage.src} alt="">
   </div>
   <div class="systems-collection">
     <div class="text-card">
@@ -117,6 +123,16 @@ h3, p {
   gap: 10px;
 }
 
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.main-grid img {
+  place-self: center;
+  width: 50%;
+}
+
 .systems-collection {
   margin-top: 3rem;
 }
@@ -137,6 +153,14 @@ h3, p {
 @media (max-width: 480px) {
   .articles-grid {
     grid-template-columns: 1fr;
+  }
+
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .main-grid img {
+    grid-row: 1;
   }
 }
 </style>

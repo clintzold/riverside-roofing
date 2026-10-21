@@ -6,14 +6,19 @@
     <span class="reveal reveal-grow"></span><h2 class="section-title reveal reveal-right">Roof Replacement</h2>
   </div>
   <div class="grid">
-    <div class="text-card">
-      <h3>Turnkey Commercial Roof Replacement</h3>
-      <p>Replacing a commercial roof requires precision engineering, strict safety protocols, and minimal operational downtime. Whether your property needs a <strong>structural metal roof upgrade or a flat membrane system installation</strong>, we handle the entire project from initial engineering and permitting to final inspection.</p>
-
-      <h3>Industrial-Grade Metal Roof Systems</h3>
-<p>We replace failing, rusted, or structurally weak roof systems with state-of-the-art <strong>commercial standing seam metal roofing.</strong> By utilizing hidden fasteners and weather-tight interlocking designs, our replacements accommodate natural thermal expansion and contraction, preventing leaks for up to 50 years.</p>
-      <h3>Certified Commercial Membrane Installations</h3>
-      <p>Our factory-certified teams excel in installing <strong>premium EPDM, TPO, and PVC flat roof membranes.</strong> We carefully evaluate your building's drainage and insulation needs before installation, ensuring your new membrane roof completely eliminates ponding water and delivers uncompromising weatherproofing.</p>
+    <div class="text-section">
+      <div class="text-card">
+        <h3>Turnkey Commercial Roof Replacement</h3>
+        <p>Replacing a commercial roof requires precision engineering, strict safety protocols, and minimal operational downtime. Whether your property needs a <strong>structural metal roof upgrade or a flat membrane system installation</strong>, we handle the entire project from initial engineering and permitting to final inspection.</p>
+      </div>
+      <div class="text-card">
+        <h3>Industrial-Grade Metal Roof Systems</h3>
+        <p>We replace failing, rusted, or structurally weak roof systems with state-of-the-art <strong>commercial standing seam metal roofing.</strong> By utilizing hidden fasteners and weather-tight interlocking designs, our replacements accommodate natural thermal expansion and contraction, preventing leaks for up to 50 years.</p>
+      </div>
+      <div class="text-card">
+        <h3>Certified Commercial Membrane Installations</h3>
+        <p>Our factory-certified teams excel in installing <strong>premium EPDM, TPO, and PVC flat roof membranes.</strong> We carefully evaluate your building's drainage and insulation needs before installation, ensuring your new membrane roof completely eliminates ponding water and delivers uncompromising weatherproofing.</p>
+      </div>
     </div>
   </div>
 </div>
@@ -22,5 +27,11 @@
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
